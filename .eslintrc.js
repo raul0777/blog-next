@@ -33,7 +33,13 @@ module.exports = {
       version: 'detect',
     },
   },
+  "settings": {
+    "react": {
+      "version": "detect",
+    }
+  }
   rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },
 };
