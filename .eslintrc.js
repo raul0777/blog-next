@@ -2,8 +2,8 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
     node: true,
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -12,33 +12,20 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
-    ecmaVersion: 'latest',
-    requireConfigFile: false,
+    ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
     },
   },
-  "settings": {
-    "react": {
-      "version": "detect",
-    }
-  }
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
